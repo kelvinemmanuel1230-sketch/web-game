@@ -1,39 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto GAME-SA: videojuegos y páginas web con alma de arcade. Conoce al equipo y prueba nuestra demo.">
     <title>Proyecto GAME-SA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
-    <!--  -->
-    <div class="top-bar">
-        <nav class="navbar">
-            <a href="">button 1</a>
-            <a href="">button 2</a>
-            <a href="">button 3</a>
-            <a href="">button 4</a>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="top-bar">
+        <a class="brand" href="#inicio" aria-label="Proyecto GAME-SA, volver al inicio">
+            <span class="brand__mark" aria-hidden="true">◆</span>
+            <span class="brand__name">GAME-SA</span>
+        </a>
+
+        <nav class="navbar" id="menu-principal" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#quienes-somos">Quiénes somos</a>
+            <a href="#jugar">Jugar</a>
+            <a href="#contacto">Contacto</a>
         </nav>
-        <button>accesibilidad</button>
-    </div>
-    
-    <div class="banner">
-        <h1>Proyecto GAME-SA</h1>
-    </div>
 
-    <img src="" alt="" class="logo">
+        <button class="a11y-toggle" type="button" aria-pressed="false" title="Activar el modo de alto contraste">
+            Accesibilidad
+        </button>
 
-    <div class="div-1">
-        <p>contenedor</p>
-    </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+            <span class="menu-toggle__icon" aria-hidden="true">☰</span>
+            <span class="menu-toggle__text">Menú</span>
+        </button>
+    </header>
 
-    <div class="div-2">
-        <a href="">jugar</a>
-    </div>
+    <main id="contenido">
+        <section class="hero" id="inicio">
+            <div class="hero__inner">
+                <p class="eyebrow">Proyecto indie</p>
+                <h1>Proyecto<br>GAME-SA</h1>
+                <p class="hero__lead">
+                    Videojuegos y páginas web con alma de arcade. Un estudio pequeño,
+                    dos personas y muchas ganas de crear experiencias únicas.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="#jugar">Jugar ahora</a>
+                    <a class="btn btn--ghost" href="#quienes-somos">Conoce al equipo</a>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer">
-        <h1>footer</h1>
-    </div>
+        <section class="section team" id="quienes-somos">
+            <div class="section__head">
+                <p class="eyebrow">El equipo</p>
+                <h2>Quiénes somos</h2>
+                <p class="section__lead">
+                    Dos generaciones, una misma pasión: aprender, enseñar y construir
+                    cosas que la gente quiera jugar.
+                </p>
+            </div>
+
+            <div class="team__grid">
+                <article class="card">
+                    <div class="card__banner" aria-hidden="true"></div>
+                    <div class="card__body">
+                        <div class="card__top">
+                            <img class="card__avatar" src="media/img/icon.webp" alt="Retrato de Jorge C. D." width="480" height="600" loading="lazy" decoding="async">
+                            <div class="card__identity">
+                                <h3 class="card__name">Jorge C. D.</h3>
+                                <p class="card__role">Maestro · Mentor</p>
+                            </div>
+                        </div>
+                        <p class="card__bio">
+                            Soy el maestro de Kelvin Encarnación. Le he enseñado todo lo que
+                            sabe… y he tenido que armarme de mucha paciencia para lograrlo,
+                            porque todavía es un poco inexperto. Aun así, con mis vastos
+                            conocimientos puedo enseñarle todo lo necesario para que se
+                            desenvuelva en el diseño web.
+                        </p>
+                        <ul class="card__tags" aria-label="Áreas de Jorge">
+                            <li>Mentoría</li>
+                            <li>Diseño web</li>
+                            <li>Paciencia</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__banner" aria-hidden="true"></div>
+                    <div class="card__body">
+                        <div class="card__top">
+                            <img class="card__avatar" src="media/img/kelvin.webp" alt="Retrato de Kelvin Encarnación" width="800" height="800" loading="lazy" decoding="async">
+                            <div class="card__identity">
+                                <h3 class="card__name">Kelvin Encarnación</h3>
+                                <p class="card__role">Desarrollador · Game Dev</p>
+                            </div>
+                        </div>
+                        <p class="card__bio">
+                            Soy Kelvin Encarnación, un programador dedicado a la creación de
+                            videojuegos y páginas web. Mi propósito es crear experiencias
+                            únicas. A pesar de no tener todavía la experiencia suficiente, me
+                            comprometo a esforzarme por ser un mejor programador. Y no solo
+                            eso: también una mejor persona.
+                        </p>
+                        <ul class="card__tags" aria-label="Áreas de Kelvin">
+                            <li>Game dev</li>
+                            <li>Páginas web</li>
+                            <li>Pixel art</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section play" id="jugar">
+            <div class="play__panel">
+                <div class="play__copy">
+                    <p class="eyebrow">Demo</p>
+                    <h2>¿Listo para jugar?</h2>
+                    <p>
+                        Nuestro primer juego está tomando forma. Este es un vistazo a lo
+                        que estamos construyendo, píxel a píxel.
+                    </p>
+                    <a class="btn btn--primary btn--lg" href="game/" target="_blank" rel="noopener">Jugar ahora</a>
+                    <p class="play__note">Se abrirá en una pestaña nueva.</p>
+                </div>
+                <figure class="play__preview">
+                    <img src="media/test.gif" alt="Vista previa en movimiento del juego" width="480" height="270" loading="lazy" decoding="async">
+                    <figcaption>Vista previa del juego</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contacto">
+        <div class="footer__inner">
+            <div class="footer__brand-block">
+                <p class="footer__brand">GAME-SA</p>
+                <p class="footer__tagline">
+                    Creamos videojuegos y páginas web con estilo propio, un píxel a la vez.
+                </p>
+            </div>
+            <nav class="footer__nav" aria-label="Navegación del pie de página">
+                <a href="#inicio">Inicio</a>
+                <a href="#quienes-somos">Quiénes somos</a>
+                <a href="#jugar">Jugar</a>
+            </nav>
+        </div>
+        <p class="footer__legal">© <span id="year">2026</span> Proyecto GAME-SA. Hecho con mucho café y píxeles.</p>
+    </footer>
 </body>
 </html>
