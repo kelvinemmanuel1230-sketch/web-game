@@ -43,6 +43,7 @@ body {
 
 .top-bar > .navbar > a:active {
     box-shadow: inset 3px 3px 0px black;
+    background-color: #dfdfdf;
 }
 
 .top-bar > button {
@@ -65,9 +66,22 @@ body {
 
 .banner {
     /* background: url("../media/terrajojo.gif"); */
+    background-color: #858585;
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     min-height: 300px;
     padding: 50px;
+}
+
+.div-1 {
+    background-color: #dfdfdf;
+}
+
+.div-2 {
+    background-color: #858585;
+}
+
+.footer {
+    background-color: #dfdfdf;
 }
