@@ -4,6 +4,7 @@ const body = document.body;
 const navbar = document.querySelector('.navbar');
 const menuToggle = document.querySelector('.menu-toggle');
 const menuIcon = document.querySelector('.menu-toggle__icon');
+const brand = document.querySelector('.brand');
 const a11yToggle = document.querySelector('.a11y-toggle');
 const year = document.querySelector('#year');
 
@@ -26,11 +27,13 @@ navbar?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => setMenu(false));
 });
 
+brand?.addEventListener('click', () => setMenu(false));
+
 window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setMenu(false);
 });
 
-window.matchMedia('(min-width: 821px)').addEventListener('change', (event) => {
+window.matchMedia('(min-width: 901px)').addEventListener('change', (event) => {
     if (event.matches) setMenu(false);
 });
 
